@@ -16,7 +16,11 @@ Instructions for installing Python can be found at: https://pytorch.org/
 
 # Demo
 
-The script demo.py contains the implementation of our method CG-CT on a dummy dataset. First, we generate a dataset of size n=100 consisting of outcome Y, treatment A, and p-dimensional covariates X (with p=10). Then, for given hyperparameters, we implement our method in three steps: (i) the balancing autoencoder is used to embed the covariates while addressing treatment selection bias; (ii) the counterfactual generator is used to compute counterfactual outcomes for varying aid volumes; and (iii) the inference model (i.e., generalized propensity score) is estimated on the resulting data. The functions for implementing the method are imported from the script main.py. 
+The script demo.py contains the implementation of our method CG-CT on a dummy dataset. 
+
+First, we generate a dataset of size n=100 consisting of outcome Y, treatment A, and p-dimensional covariates X (with p=10). Then, for given hyperparameters, we implement our method in three steps: (i) the balancing autoencoder is used to embed the covariates while addressing treatment selection bias; (ii) the counterfactual generator is used to compute counterfactual outcomes for varying aid volumes; and (iii) the inference model (i.e., generalized propensity score (GPS)) is estimated on the resulting data. 
+
+The demonstration code returns the estimated coefficients of the GPS model for a given dummy dataset. The functions for implementing the method are imported from the script main.py. 
 
 # Results
 
