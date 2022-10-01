@@ -10,9 +10,9 @@ pytorch 1.7
 
 # Installation 
 
-Instructions for installing Python can be found at: https://www.python.org/ 
+Instructions for installing Python can be found at: https://www.python.org/ (installation may take around 15-20 minutes)
 
-Instructions for installing Python can be found at: https://pytorch.org/
+Instructions for installing PyTorch can be found at: https://pytorch.org/ (package installation takes around 10-20 seconds)
 
 # Demo
 
@@ -20,7 +20,7 @@ The script demo.py contains the implementation of our method CG-CT on a dummy da
 
 First, we generate a dataset of size n=100 consisting of outcome Y, treatment A, and p-dimensional covariates X (with p=10). Then, for given hyperparameters, we implement our method in three steps: (i) the balancing autoencoder is used to embed the covariates while addressing treatment selection bias; (ii) the counterfactual generator is used to compute counterfactual outcomes for varying aid volumes; and (iii) the inference model (i.e., generalized propensity score (GPS)) is estimated on the resulting data. 
 
-The demonstration code returns the estimated coefficients of the GPS model for a given dummy dataset. The functions for implementing the method are imported from the script main.py. 
+The demonstration code returns the estimated coefficients of the GPS model for a given dummy dataset. The runtime is around 3-5 minutes. The functions for implementing the method are imported from the script main.py. 
 
 # Results
 
