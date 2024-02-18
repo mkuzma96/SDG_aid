@@ -42,8 +42,8 @@ intercept = mod_LM.fit(data_lm[:,1:], data_lm[:,0]).intercept_
 means = intercept + np.matmul(data_lm[:,1:], coefs)
 means = (means - np.min(means))/(np.max(means) - np.min(means))
 means = np.sqrt(means)
-Y_sim = np.random.normal(loc=means, scale=0.01, size=(n,1))
-data_sim_train = np.concatenate([Y_sim, data_train[:,1:]],axis=1)
+Y_sim = np.random.normal(loc=means, scale=0.01)
+data_sim_train = np.concatenate([Y_sim.reshape(n,1), data_train[:,1:]],axis=1)
 data_sim_train = pd.DataFrame(data_sim_train)
 data_sim_train.to_csv('Sim_data_train.csv', index=False)
 
