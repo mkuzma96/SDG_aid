@@ -393,7 +393,7 @@ def DRNet(data, params):
 
             # Train discriminator
             y_pred = model(x_data, t_data)
-            y_pred = y_pred.view(-1)
+            y_pred = y_pred.view(-1).to(device)
             y_pred2 = y_pred[torch.nonzero(l_enc.reshape(-1))].to(device)
             loss = MSE(y_pred2, y_data)
 
